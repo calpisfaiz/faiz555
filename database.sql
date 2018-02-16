@@ -5,8 +5,8 @@ CREATE TABLE Thread(
 	Thread_id 			NUMBER(4) 		NOT NULL,
 	Thread_username 	VARCHAR(20) 	NOT NULL,
 	Thread_res	 		NUMBER(20)	 	NOT NULL,
-	Thread_title 		DATE		 	DEFAULT SYSDATE,
-	Thread_title 		DATE		 	DEFAULT SYSDATE
+	Thread_date 		DATE		 	DEFAULT SYSDATE,
+	Thread_update 		DATE		 	DEFAULT SYSDATE
 );
 
 CREATE TABLE Res(
@@ -17,7 +17,7 @@ CREATE TABLE Res(
 	Res_date 		DATE		 	DEFAULT SYSDATE
 );
 
-CREATE TABLE User(
+CREATE TABLE BBSUser(
 	User_no 		NUMBER(4) 		PRIMARY KEY,
 	User_name 		VARCHAR(20) 	UNIQUE,
 	User_password 	VARCHAR(20) 	NOT NULL
