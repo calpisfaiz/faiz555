@@ -1,3 +1,4 @@
+//読み込みのResのサーブレット
 package filters;
 
 import javax.servlet.Filter;
