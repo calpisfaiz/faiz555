@@ -55,94 +55,94 @@ public class ResServlet extends HttpServlet{
 		BBSDataBeans bbsData = new BBSDataBeans();
 		String data =req.getParameter("function");
 	
-	if(data == null){
+	//if(data == null){
 		
-	}
+	//}
 	
-	else if(data.compareTo("WRITE") == 0){ //書き込み
+	//else if(data.compareTo("WRITE") == 0){ //書き込み
 	
-	Write(req,res,Data);
-	}
+	//Write(req,res,Data);
+	//}
 
-	else if(data.comparareTo("DELETE") == 0){ //削除
-		Delete(req,res,Data);
-	}
+	//else if(data.comparareTo("DELETE") == 0){ //削除
+	//	Delete(req,res,Data);
+	//}
 	
 	
-	req.setAttribute("data",Data);
+	//req.setAttribute("data",Data);
 	
-	sc.getRequestDispatcher("/.jsp").forward(req,res);//jspファイル
-	}
+	//sc.getRequestDispatcher("/.jsp").forward(req,res);//jspファイル
+	//}
 	
-	.DeleteItem(index,password);
+	//.DeleteItem(index,password);
 	
-	.ReadArticles(0,Data);
-}
+	//.ReadArticles(0,Data);
+//}
 
 //メッセージ投稿
 
-public void Write(HttpServletRequest req,HttpServletRespones res)
+//public void Write(HttpServletRequest req,HttpServletRespones res)
 
-throws IOException,ServletException
-{
+//throws IOException,ServletException
+//{
 	
-	BBSItem Item = new BBSItem();
+	//BBSItem Item = new BBSItem();
 	
-	item.name =KanjiConv.ConvJStr(req.getParameter("name"));
+	//item.name =KanjiConv.ConvJStr(req.getParameter("name"));
 	
-	if(item.name == null)
+	//if(item.name == null)
 	
-	item.name ="";
+	//item.name ="";
 	
-	item,email =KanjiConv.ConvJStr(req.getParameter("email"));
+	//item,email =KanjiConv.ConvJStr(req.getParameter("email"));
 	
-	if(item.email == null)
+	//if(item.email == null)
 	
-	item.content ="";
+	//item.content ="";
 	
-	item.emaiol =kanjiConv.ConvJStr(req.getParameter("content"));
+	//item.emaiol =kanjiConv.ConvJStr(req.getParameter("content"));
 	
-	if(item.content == null)
+	//if(item.content == null)
 	
-	item.content ="";
+	//item.content ="";
 	
-	item.deleteKey =KanjiConv.ConvJStr(req.getParameter("pass"));
+	//item.deleteKey =KanjiConv.ConvJStr(req.getParameter("pass"));
 	
-	if(item.content == null)
+	//if(item.content == null)
 	
-	item.pass ="";
+	//item.pass ="";
 	
-	bbsManager.AddItem(item);
-	bbsMnager.RreadArticles(0,bbsData);
-}
+	//bbsManager.AddItem(item);
+	//bbsMnager.RreadArticles(0,bbsData);
+//}
 
 
 //読み出し
 
-public void SRead(HttpSrvletRequest req,HttpServletRespones res)
+//public void SRead(HttpSrvletRequest req,HttpServletRespones res)
 
-throws IOExcepion,ServletException
-{
+//throws IOExcepion,ServletException
+//{
 	
-	int nidex,lastIndex;
+	//int nidex,lastIndex;
 	
-	String strIndex =req.getParameter("index");
+	//String strIndex =req.getParameter("index");
 	
-	if(strIndex ! = null){
+	//if(strIndex ! = null){
 		
-		index =Integer.paseInt(strIndex);
-	}
+		//index =Integer.paseInt(strIndex);
+	//}
 	
-	}else{
+	//}else{
 		
-		index = 0;
+		//index = 0;
 		
-	}
+	//}
 	
-	bbsManager.ReadArticles(index,bbsData);
-	}
+	//bbsManager.ReadArticles(index,bbsData);
+	//}
 
-	public void destroy()
-{
+	//public void destroy()
+//{
 	}
 }
