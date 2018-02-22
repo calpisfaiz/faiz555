@@ -1,4 +1,4 @@
-//Res書き込みのサーブレット
+//Res譖ｸ縺崎ｾｼ縺ｿ縺ｮ繧ｵ繝ｼ繝悶Ξ繝�繝�
 import java.io*;
 
 import javax.servlet*;
@@ -14,23 +14,23 @@ public void ResServlrt extends HttpServlet{
 		rep.setContentType("text/html; charset=Shitft_JIS");
 		PrintWriter out =res.getWriter();
 		
-		out.println("<html>");
+		//out.println("<html>");
 		
-		out.println("<head>");
+		//out.println("<head>");
 		
-		out.println("<title>サンプル</title>");
+		//out.println("<title>繧ｵ繝ｳ繝励Ν</title>");
 		
-		out.println("</head>");
+		//out.println("</head>");
 		
-		out.println("<body>");
+		//out.println("<body>");
 		
-		out.println("<p>ResWriter</p>");
+		//out.println("<p>ResWriter</p>");
 		
-		out.println("<p>レスの書き込み</p>");
+		//out.println("<p>繝ｬ繧ｹ縺ｮ譖ｸ縺崎ｾｼ縺ｿ</p>");
 		
-		out.println("</body>");
+		//out.println("</body>");
 		
-		out.println("</html>");
+		//out.println("</html>");
 		
 		
 		out.close();
