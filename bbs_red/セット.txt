@@ -1,0 +1,22 @@
+set classpath=C:\tomcat8\lib\servlet-api.jar
+
+set classpath=C:\tomcat8\lib\ojdbc14.jar
+
+set classpath=C:\bbsdata\bbs_red\WEB-INF\classes
+
+
+
+set classpath=C:\tomcat8\lib\servlet-api.jar;C:\tomcat8\lib\ojdbc14.jar;C:\webapps\board\WEB-INF\classes
+
+
+
+
+
+set classpath=C:\tomcat8\lib\servlet-api.jar;C:\tomcat8\lib\ojdbc14.jar;C:\bbsdata\bbs_red\WEB-INF\classes
+
+
+
+‰EŒ®?“®–½—ß’ñŽ¦Œ³
+lsnrctl start
+lsnrctl stop
+lsnrctl stat

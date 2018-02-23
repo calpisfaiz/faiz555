@@ -1,0 +1,102 @@
+<web-app xmlns="http://java.sun.com.xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+	
+	
+	
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<jsp-file>/Index.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/Index</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<jsp-file>/Login.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ThreadView</servlet-name>
+		<jsp-file>/ThreadView.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ThreadView</servlet-name>
+		<url-pattern>/ThreadView</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ResView</servlet-name>
+		<jsp-file>/ResView.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResView</servlet-name>
+		<url-pattern>/ResView</url-pattern>
+	</servlet-mapping>
+	
+	
+		<servlet>
+		<servlet-name>test</servlet-name>
+		<jsp-file>/test.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>ThreadServlet</servlet-name>
+		<servlet-class>ThreadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ThreadServlet</servlet-name>
+		<url-pattern>/ThreadServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ResServlet</servlet-name>
+		<servlet-class>ResServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResServlet</servlet-name>
+		<url-pattern>/ResServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>WriteThreadServlet</servlet-name>
+		<servlet-class>WriteThreadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WriteThreadServlet</servlet-name>
+		<url-pattern>/WriteThreadServlet</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
