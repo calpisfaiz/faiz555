@@ -2,13 +2,13 @@
 	contentType="text/html; charset=Windows-31J"%>
 <!DOCTYPE html>
 <html>
-<head><title>ã‚µãƒ³ãƒ—ãƒ«æŽ²ç¤ºæ¿</title></head>
+<head><title>ƒTƒ“ƒvƒ‹ŒfŽ¦”Â</title></head>
 <body>
 
 <form action="board.action" theme="simple">
 <input type="text" name="right" >
-<input type="submit" value="æ¤œç´¢">
-<input type="submit" value="è¿”ä¿¡">
+<input type="submit" value="ŒŸõ">
+
 </form>
 
 <actionerror/>
@@ -16,10 +16,10 @@
 <table border="1" align=center width=98% heigth=98% cellaspacing=1 cellpadding=6>
 
 <tr height = 20px>
-<th width="10%">æ—¥æ™‚</th>
-<th width="15%">åå‰</th>
-<th width="30%">æœ¬æ–‡</th>
-<th width="10%">ç•ªå·</th>
+<th width="5%">“úŽž</th>
+<th width="5%">–¼‘O</th>
+<th width="30%">•ÔM</th>
+<th width="10%">”Ô†</th>
 </tr>
 <tr height = 20% >
 <td></td><td></td><td></td><td></td>
@@ -27,7 +27,7 @@
 <tr height = 10% >
 <td></td><td></td><td></td><td></td>
 </tr>
-
+<input type="submit" value="•ÔM">
 
 </body>
 </html>
