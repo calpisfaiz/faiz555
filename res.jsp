@@ -3,7 +3,7 @@
 
 <form name="frm1" method"POST" action"ResServlet">
 <p>入力ホーム</p>
-<textarea name="ResComennt" cols="50" rows="10">
+<textarea name="ResComment" cols="50" rows="10">
 
 </textarea>
 
