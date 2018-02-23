@@ -10,7 +10,5 @@
 
 </textarea>
 
-</br></br>
-
 <input type="submit" name="send" value="送信" left: 50%; top: 50%"/>
 </form>
