@@ -6,6 +6,7 @@
 <input type="text" name="right">
 <input type="submit" value="検索"></br>
 </br>
+<p>入力ホーム</p>
 <textarea name="example" cols="50" rows="10">
 
 </textarea>
