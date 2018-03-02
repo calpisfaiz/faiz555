@@ -50,18 +50,26 @@
 	</servlet-mapping>
 	
 	
-		<servlet>
-		<servlet-name>test</servlet-name>
-		<jsp-file>/test.jsp</jsp-file>
+	<servlet>
+		<servlet-name>writeThread</servlet-name>
+		<jsp-file>/writeThread.jsp</jsp-file>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>test</servlet-name>
-		<url-pattern>/test</url-pattern>
+		<servlet-name>writeThread</servlet-name>
+		<url-pattern>/writeThread</url-pattern>
 	</servlet-mapping>
 	
 	
-	
+	<servlet>
+		<servlet-name>writeRes</servlet-name>
+		<jsp-file>/writeRes.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>writeRes</servlet-name>
+		<url-pattern>/writeRes</url-pattern>
+	</servlet-mapping>
 	
 	
 	

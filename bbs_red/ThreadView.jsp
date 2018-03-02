@@ -22,7 +22,8 @@
 	
 	
 	<h4 style="color:white;" align=left>ユーザー　　Welcome</h4>		
-	<input type="button" id="createthread"  value="スレッド作成" onclick="self.location.href='test.jsp'" align=right><br><br><br>
+	<input type="button" id="createthread"  value="スレッド作成" onclick="self.location.href='writeThread.jsp'" align=right>
+	<input type="button" id="index" 	 value="TOPページに戻る" onclick="self.location.href='Index.jsp'" align=right><br><br><br>
 	
 	
 	<table border="1" style="color:white;" align=center width=98% height=98% cellspacing=1 cellpadding=6>
@@ -36,39 +37,20 @@
 	</tr>
 	
 	<c:forEach var="threadView" items="${threadView}">
-	<a href="ThreadServlet?id=${threadView.threadNo}">
+	
 	<tr>
 		<td>${threadView.threadNo}</td>
-		<td>${threadView.threadTitle}</td>
+		<td>
+		<a href="ResServlet?no=${threadView.threadNo}&title=${threadView.threadTitle}&username=${threadView.threadUser}&date=${threadView.threadDate}" style="color:white;">
+		${threadView.threadTitle}</a>
+		</td>
 		<td>${threadView.threadUser}</td>
 		<td>${threadView.threadDate}</td>
 		<td>${threadView.threadRes}</td>
 	</tr>
+	
 	</c:forEach>
 	</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </body>

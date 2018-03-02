@@ -1,14 +1,22 @@
 package Beans;
+import Beans.ResBeans;
 
 public class ThreadBeans{
+	
+	private ResBeans resbeans;
 	
 	private String threadUser;
 	private String threadNo;
 	private String threadTitle;
 	private String threadRes;
+	private String threadResCount;
 	private String threadDate;
 
 //==================================set method==================================	
+	public void setResBean(ResBeans resbeans){
+			this.resbeans = resbeans;
+		}
+	
 	public void setThreadUser(String threadUser){
 		this.threadUser = threadUser;
 	}
@@ -25,11 +33,19 @@ public class ThreadBeans{
 		this.threadRes = threadRes;
 	}
 	
+	public void setResCount(String _threadResCount){
+			this.threadResCount = _threadResCount;
+		}
+	
 	public void setThreadDate(String threadDate){
 		this.threadDate = threadDate;
 	}
 
 //==================================get method==================================
+	public ResBeans getResBean(){
+			return resbeans;
+		}
+	
 	public String getThreadUser(){
 		return threadUser;
 	}
@@ -45,6 +61,10 @@ public class ThreadBeans{
 	public String getThreadRes(){
 		return threadRes;
 	}
+	
+	public String getResCount(){
+			return threadResCount;
+		}
 	
 	public String getThreadDate(){
 		return threadDate;

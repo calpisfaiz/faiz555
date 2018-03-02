@@ -12,9 +12,9 @@ public class WriteThreadExecute{
 		String threadUser = tb.getThreadTitle();
 		if(threadUser == ""){
 			//create sequence
-			sql = "INSERT INTO thread(thread_no, thread_title, thread_date) values (threadsequence.nexval,'"+tb.getThreadTitle()+"',sysdate)";
+			sql = "INSERT INTO thread(thread_no, thread_title, thread_date) values ((select count(thread_no) from thread)+1,'"+tb.getThreadTitle()+"')";
 		}else{
-			sql = "INSERT INTO thread(thread_no, thread_title, thread_name, thread_date) values (threadsequence.nexval,'"+tb.getThreadTitle()+"','"+tb.getThreadUser()+"',sysdate)";
+			sql = "INSERT INTO thread(thread_no, thread_title, thread_username, thread_date) values ((select count(thread_no) from thread)+1,'"+tb.getThreadTitle()+"','"+tb.getThreadUser()+"',sysdate)";
 		}
 		dba.write(sql);
 		//dba.createSqe();
