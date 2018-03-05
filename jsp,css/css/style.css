@@ -1,0 +1,16 @@
+
+
+body {
+background-color:#999;
+}
+
+#formcontent{
+	width: 100%;
+}
+
+#formcontent #content{
+position: relative;
+width: 40%;
+left: 30%;
+margin: 15px;
+}
