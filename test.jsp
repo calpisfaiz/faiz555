@@ -4,16 +4,16 @@
 
 
 <head>
-	<title>‹L“ü</title>
+	<title>â€¹è¨˜å…¥</title>
 </head>
 <body>
 	<form method="post" action="ThreadServlet" id="formcontent">
-		<p id="content">“ü—Íƒz[ƒ€</p>
+		<p id="content">å…¥åŠ›ãƒ›ãƒ¼ãƒ </p>
 		<p id="content"><textarea name="ResComment" cols="50" rows="10">
 		</textarea></p>
 		<br>
 		
-		<p id="content"><input type="submit" value="‹L“ü" id="bt"></p>
+		<p id="content"><input type="submit" value="è¨˜å…¥" id="bt"></p>
 	</form>
 </body>
 
