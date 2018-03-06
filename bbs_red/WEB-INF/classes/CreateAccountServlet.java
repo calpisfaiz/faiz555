@@ -6,24 +6,38 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Execute.*;
+import Beans.*;
 
 
 public class CreateAccountServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
 	throws IOException, ServletException{
 		req.setCharacterEncoding("Windows-31J");
-		
-		public String createAccount(String id, String pass){
-			DBAccessor DBA = new DBAccessor();
-			DBA.createConnection();
 
-			return DBA.addUser(id, pass);
-		}
+		RequestDispatcher dispatcher = req.getRequestDispatcher("ThreadView");
 		
-		req.setAttribute("newAccount", createAccount(req.getParameter("id"), req.getParameter("pass")));
+		dispatcher.forward(req,res);
+	}
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse res)
+	throws IOException, ServletException{
+		req.setCharacterEncoding("Windows-31J");
 		
-		RequestDispatcher rd = req.getRequestDispatcher("threadView.jsp");
+		CreateAccountExecute cae = new CreateAccountExecute();
+		
+		String name = req.getParameter("newname");
+		String pass = req.getParameter("newpassword");
+		
+		UserBeans ub = new UserBeans();
+		ub.setUserName(name);
+		ub.setUserPass(pass);
+		
+		cae.createAccount(name,pass);
+		RequestDispatcher rd = req.getRequestDispatcher("Login.jsp");
 		rd.forward(req,res);
+		
 		
 	}
 }
+	

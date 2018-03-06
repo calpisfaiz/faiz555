@@ -24,9 +24,9 @@ public class ResServlet extends HttpServlet{
 		WriteResExecute wre = new WriteResExecute();
 		ReadResExecute rre = new ReadResExecute();
 		ResBeans rb = new ResBeans();
-		
-		
-
+		//session
+		HttpSession session = req.getSession();
+		UserBeans ub = (UserBeans)session.getAttribute("loginUser");
 		
 		
 		//Get Parameter
@@ -40,6 +40,7 @@ public class ResServlet extends HttpServlet{
 		String tdate = req.getParameter("date");
 		//get res username
 		String resname = req.getParameter("User");
+		//String resname = ub.getUserName();
 		//get thread title
 		String content = req.getParameter("Content");
 		
@@ -60,8 +61,8 @@ public class ResServlet extends HttpServlet{
 		req.setAttribute("threadUsername",tname);
 		req.setAttribute("threadDate",tdate);
 		
-		DBAccessor dba = new DBAccessor();
-		ArrayList<ResBeans> arb = dba.readRes(no);
+		//DBAccessor dba = new DBAccessor();	
+		ArrayList<ResBeans> arb = rre.readRes(no);
 		req.setAttribute("resView",arb);
 		
 		
@@ -89,8 +90,8 @@ public class ResServlet extends HttpServlet{
 		req.setAttribute("threadUsername",tuser);
 		req.setAttribute("threadDate",tdate);
 		
-		DBAccessor dba = new DBAccessor();
-		ArrayList<ResBeans> arb= dba.readRes(no); 
+		//DBAccessor dba = new DBAccessor();	
+		ArrayList<ResBeans> arb= rre.readRes(no);
 		req.setAttribute("resView", arb);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("ResView");

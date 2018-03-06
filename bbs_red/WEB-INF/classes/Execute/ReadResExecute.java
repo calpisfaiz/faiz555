@@ -7,11 +7,11 @@ import java.util.ArrayList;
 
 public class ReadResExecute{
 	
-	DBAccessor dba = new DBAccessor();
+	DBAccessor dba = new DBAccessor();	
 
 	public ArrayList readRes(String _id){
-		String id = _id;
 		
+		String id = _id;		
 		return dba.readRes(id);
 		
 	}
