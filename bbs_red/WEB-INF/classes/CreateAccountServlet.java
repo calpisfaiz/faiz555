@@ -15,7 +15,7 @@ public class CreateAccountServlet extends HttpServlet{
 	throws IOException, ServletException{
 		req.setCharacterEncoding("Windows-31J");
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("ThreadView");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("Login");
 		
 		dispatcher.forward(req,res);
 	}

@@ -26,7 +26,9 @@ public class ThreadServlet extends HttpServlet{
 		WriteThreadExecute wte = new WriteThreadExecute();
 		ReadThreadExecute rte = new ReadThreadExecute();
 		
-		String un=req.getParameter("thread_username");//thread_username
+		HttpSession session = req.getSession();
+		String un = (String)session.getAttribute("username");
+		//String un=req.getParameter("thread_username");//thread_username
 		String t=req.getParameter("thread_title");//thread_usertitle
 		//String no=req.getParameter("thread_no");//thread_no
 		//String re=req.getParameter("thread_res");//thread_usertitle
@@ -42,48 +44,22 @@ public class ThreadServlet extends HttpServlet{
 		//wtb.setThreadNo(no);
 		//wtb.setThreadRes(re);
 		
-		DBAccessor dba = new DBAccessor();
+		//DBAccessor dba = new DBAccessor();
 		//dba.WriteThread(threadBean);
-		ArrayList<ThreadBeans> atb = dba.readThreads();
+		ArrayList<ThreadBeans> atb = rte.readThread();
 		
 		
 		req.setAttribute("threadView", atb);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("ThreadView");
 		
-		dispatcher.forward(req,res);
-/*
-		ArrayList user = new ArrayList();
-		ThreadBeans threadBean = new ThreadBeans();
-		//WriteThreadExecute wte = new WriteThreadExecute();
-		ReadThreadExecute rte = new ReadThreadExecute();
-		
-		String un=req.getParameter("thread_username");//thread_username
-		String t=req.getParameter("thread_title");//thread_usertitle
-		//String no=req.getParameter("thread_no");//thread_no
-		//String re=req.getParameter("thread_res");//thread_usertitle
-		
-		threadBean.setThreadUser(un);
-		threadBean.setThreadTitle(t);
-		
-		//wte.writeThread(threadBean);
-		//user = rte.readThread();
-		
-		
-		//wtb.setThreadNo(no);
-		//wtb.setThreadRes(re);
-		
-		DBAccessor dba = new DBAccessor();
-		dba.WriteThread(threadBean);
-		ArrayList<ThreadBeans> atb = dba.readThreads();
-		
-		
-		req.setAttribute("threadView", atb);
-		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("ThreadView");
-		
-		dispatcher.forward(req,res);
-*/		
+		if(session.getAttribute("username") == null) {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("ThreadView1");
+			dispatcher.forward(req,res);
+		}else{
+			RequestDispatcher dispatcher = req.getRequestDispatcher("ThreadView");
+			dispatcher.forward(req,res);
+		}
+
 	
 	}
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
@@ -94,15 +70,22 @@ public class ThreadServlet extends HttpServlet{
 		
 		ReadThreadExecute rte = new ReadThreadExecute();
 		
-		DBAccessor dba = new DBAccessor();
+		//DBAccessor dba = new DBAccessor();
 		
-		ArrayList<ThreadBeans> atb= dba.readThreads(); 
+		ArrayList<ThreadBeans> atb= rte.readThread(); 
 		
 		req.setAttribute("threadView", atb);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("ThreadView");
+		HttpSession session = req.getSession();
+		if(session.getAttribute("username") == null) {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("ThreadView1");
+			dispatcher.forward(req,res);
+		}else{
+			RequestDispatcher dispatcher = req.getRequestDispatcher("ThreadView");
+			dispatcher.forward(req,res);
+		}
 		
-		dispatcher.forward(req,res);
+		
 	}
 
 }

@@ -91,9 +91,7 @@ public class DBAccessor{
 		}
   	return userBeanList;
   }
-	
-	
-	
+
 	public ResultSet select(String sql){
 		int i = 0;
 		
@@ -107,8 +105,6 @@ public class DBAccessor{
 		}catch(SQLException e){
 			System.out.println("エラーコード"+e.getErrorCode());
 		}
-		
-		
 		return rs;
 		
 	}

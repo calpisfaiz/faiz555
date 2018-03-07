@@ -12,12 +12,7 @@
 <div>
 		<form method='post' action='ResServlet'>
 			<table style="color:white;">
-				<tr><td><font face="DFKai-sb" size="5" style="color:white;" >ユーザー</font></td><td>
-				<font face="DFKai-sb" size="4" style="color:yellow;"><b>
-				<%if(session.getAttribute("username") == null) {
-					out.println("NO Name");
-				}else
-            	out.println(session.getAttribute("username"));%></b></font></td></tr>
+				<tr><td><font face="DFKai-sb" size="4" style="color:white;">名前</font></td><td><input type="text" name="User" id="res_name"></td></tr>
 				<tr><td colspan="2"><font face="DFKai-sb" size="5" style="color:white;" >返信内容</font></td></tr>
 				<tr><td colspan="2">
 					<textarea id="textbox" type='text' name='Content'></textarea>
@@ -28,7 +23,7 @@
 
 				</td></tr>
 				<tr><td align="right" colspan="2"><input type="submit" value="送信 "></td></tr>
-				<form>
+				
 			</font></table>
 		</form>
 	</div>

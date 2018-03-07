@@ -59,6 +59,16 @@
 		<url-pattern>/ThreadView</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>ThreadView1</servlet-name>
+		<jsp-file>/ThreadView1.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ThreadView1</servlet-name>
+		<url-pattern>/ThreadView1</url-pattern>
+	</servlet-mapping>
+	
 	
 	<servlet>
 		<servlet-name>ResView</servlet-name>
@@ -68,6 +78,16 @@
 	<servlet-mapping>
 		<servlet-name>ResView</servlet-name>
 		<url-pattern>/ResView</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ResView1</servlet-name>
+		<jsp-file>/ResView1.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResView1</servlet-name>
+		<url-pattern>/ResView1</url-pattern>
 	</servlet-mapping>
 	
 	
@@ -82,15 +102,6 @@
 	</servlet-mapping>
 	
 	
-	<servlet>
-		<servlet-name>writeRes</servlet-name>
-		<jsp-file>/writeRes.jsp</jsp-file>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>writeRes</servlet-name>
-		<url-pattern>/writeRes</url-pattern>
-	</servlet-mapping>
 	
 	
 	

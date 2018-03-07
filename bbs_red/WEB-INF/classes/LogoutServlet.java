@@ -17,6 +17,6 @@ public class LogoutServlet extends HttpServlet{
 		//session.removeAttribute("user");
 		
 		req.getSession().invalidate();		//session cancel
-		res.sendRedirect("Index");			//go to index
+		res.sendRedirect("ThreadServlet");			//go to index
 	}
 }

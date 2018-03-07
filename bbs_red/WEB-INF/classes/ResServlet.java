@@ -39,7 +39,13 @@ public class ResServlet extends HttpServlet{
 		//get thread date
 		String tdate = req.getParameter("date");
 		//get res username
-		String resname = req.getParameter("User");
+		
+		String resname;
+		if(session.getAttribute("username")== null){
+			resname = req.getParameter("User");
+		}else{
+			resname = (String)session.getAttribute("username");
+		}
 		//String resname = ub.getUserName();
 		//get thread title
 		String content = req.getParameter("Content");
@@ -66,15 +72,22 @@ public class ResServlet extends HttpServlet{
 		req.setAttribute("resView",arb);
 		
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("ResView");
-		
-		dispatcher.forward(req,res);
+		if(session.getAttribute("username") == null) {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("ResView1");
+			dispatcher.forward(req,res);
+		}else{
+			RequestDispatcher dispatcher = req.getRequestDispatcher("ResView");
+			dispatcher.forward(req,res);
+		}
 		
 	
 	}
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
 	throws IOException, ServletException{
 		req.setCharacterEncoding("Windows-31J");
+		
+		
+		HttpSession session = req.getSession();
 		
 		ReadResExecute rre = new ReadResExecute();
 		
@@ -94,9 +107,13 @@ public class ResServlet extends HttpServlet{
 		ArrayList<ResBeans> arb= rre.readRes(no);
 		req.setAttribute("resView", arb);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("ResView");
-		
-		dispatcher.forward(req,res);
+		if(session.getAttribute("username") == null) {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("ResView1");
+			dispatcher.forward(req,res);
+		}else{
+			RequestDispatcher dispatcher = req.getRequestDispatcher("ResView");
+			dispatcher.forward(req,res);
+		}
 	
 	}
 

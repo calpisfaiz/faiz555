@@ -13,16 +13,11 @@
 </head>
 
 <body bgcolor ="black">
-
 <h1 style="color:white;" align=center>Welcome To ThreadView</h1>
-<font face="DFKai-sb" size="4" style="color:yellow;" align=right><b>
-	<%
-        if(session.getAttribute("username") == null) {
-            out.println("NO Name");
-        }
-        else
-            out.println("Mr. / Miss.　"+ session.getAttribute("username"));
-    %>
+
+	<font face="DFKai-sb" size="4" style="color:yellow;" align=right><b>
+	Mr./Miss<br>
+	ログインすると、スレッドの投稿ができるよ！
     </b></font>
 	
 	
@@ -36,12 +31,9 @@
 	<input type="submit" value="検索" id="search" style="width:200px;height:25px;font-size:15px;">
 	</form>
 	
-	
-	<input type="button" id="createthread" style="width:120px;height:30px;font-size:10px;" value="スレッド作成" onclick="self.location.href='writeThread.jsp'" align=right>
+	<input type="button" id="login" style="width:120px;height:30px;font-size:10px;" value="GO Login" onclick="self.location.href='Login.jsp'" align=right>
 	<input type="button" id="index" style="width:120px;height:30px;font-size:10px;" value="TOPページに戻る" onclick="self.location.href='Index.jsp'" align=right>
-	<input type="button" id="logout" style="width:120px;height:30px;font-size:10px;" value="Logout" onclick="Logout()" align=right>
 	<br><br><br>
-	
 	
 	<table border="1" style="color:white;" align=center width=98% height=98% cellspacing=1 cellpadding=6>
 

@@ -34,8 +34,8 @@
 		<div class="row">
 			<h1> </h1>
 			<h1> </h1>
-			<font color="white"><h1>掲示板</h1>
-			<h1>Login Again</h1><br><br><br>
+			<font color="white">
+			<font face="DFKai-sb" size="7">Login</font><br><br><br>
 		</div>
 		</div>
 	<div id="title" align="center">
@@ -43,8 +43,8 @@
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
 			<div class="alert alert-dismissible alert-danger">
-				<h1><strong>認証に失敗しました<br>
-				再度ユーザー名とパスワードを入力してください</strong></h1>
+				<font face="DFKai-sb" size="6"><strong>認証に失敗しました<br>
+				再度ユーザー名とパスワードを入力してください</strong></font><br><br>
 			</div>
 		</div>
 	</div>

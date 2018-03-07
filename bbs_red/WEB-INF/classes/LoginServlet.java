@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet{
 		
 		if (check){
 			// 認証済みにセット 
-			res.sendRedirect("Index");
+			res.sendRedirect("ThreadServlet");
 		}else{
 			// 認証に失敗したら、ログイン画面に戻す */
 				res.sendRedirect("reLogin");

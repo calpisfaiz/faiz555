@@ -35,11 +35,12 @@ public class LoginExecute{
 				//単一の ResultSet オブジェクトを返す
 				ResultSet rs = db.select(sql); 
 				rs.next();
-				u.setUserName(rs.getString(1));
-				u.setUserPass(rs.getString(2));
+				u.setUserName(rs.getString(2));
+				u.setUserPass(rs.getString(3));
 				//u.setHn(rs.getString(3));
 				//セッションを使い値をsetする
 				session.setAttribute("user",u);
+				session.setAttribute("username",u.getUserName());
 				//閉じる
 				db.close();
 	      		return true;
