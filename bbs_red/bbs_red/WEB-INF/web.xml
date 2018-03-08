@@ -1,0 +1,175 @@
+<web-app xmlns="http://java.sun.com.xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+	
+	
+	
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<jsp-file>/Index.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/Index</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>NewAccount</servlet-name>
+		<jsp-file>/NewAccount.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>NewAccount</servlet-name>
+		<url-pattern>/NewAccount</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<jsp-file>/Login.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>relogin</servlet-name>
+		<jsp-file>/reLogin.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>relogin</servlet-name>
+		<url-pattern>/reLogin</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ThreadView</servlet-name>
+		<jsp-file>/ThreadView.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ThreadView</servlet-name>
+		<url-pattern>/ThreadView</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ThreadView1</servlet-name>
+		<jsp-file>/ThreadView1.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ThreadView1</servlet-name>
+		<url-pattern>/ThreadView1</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ResView</servlet-name>
+		<jsp-file>/ResView.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResView</servlet-name>
+		<url-pattern>/ResView</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ResView1</servlet-name>
+		<jsp-file>/ResView1.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResView1</servlet-name>
+		<url-pattern>/ResView1</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>writeThread</servlet-name>
+		<jsp-file>/writeThread.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>writeThread</servlet-name>
+		<url-pattern>/writeThread</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>ThreadServlet</servlet-name>
+		<servlet-class>ThreadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ThreadServlet</servlet-name>
+		<url-pattern>/ThreadServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ResServlet</servlet-name>
+		<servlet-class>ResServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResServlet</servlet-name>
+		<url-pattern>/ResServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>CreateAccountServlet</servlet-name>
+		<servlet-class>CreateAccountServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CreateAccountServlet</servlet-name>
+		<url-pattern>/CreateAccountServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>LogoutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/LogoutServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>SearchServlet</servlet-name>
+		<servlet-class>SearchServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SearchServlet</servlet-name>
+		<url-pattern>/SearchServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>
