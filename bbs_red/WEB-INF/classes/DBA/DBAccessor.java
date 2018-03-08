@@ -25,7 +25,122 @@ public class DBAccessor{
 			System.out.println("connect接続失敗");
 		}
 	}
-	
+//======================================================Search======================================================		
+	public ArrayList<ThreadBeans> searchNo(String data){
+		ArrayList<ThreadBeans> threadList = new ArrayList<ThreadBeans>();
+		
+		try{
+			System.out.println(data);
+			String sql="select thread_no,thread_title,thread_username,thread_date,thread_res from thread where thread_no = '"+data+"' order by thread_no";		//select文oracleに入力
+			getConnection();
+			System.out.println("searchNo接続した");
+			Statement st=conn.createStatement();
+
+			ResultSet rs=st.executeQuery(sql);
+			//st = conn.prepareStatement(sql);			//prepareの状態
+			System.out.println("prepareStatementが終了");
+			//re=st.executeQuery();					//実行select
+			System.out.println("executeQueryが終了");
+			
+			while(rs.next()){
+				ThreadBeans tbeans = new ThreadBeans();
+				
+				tbeans.setThreadNo(rs.getString(1));
+				tbeans.setThreadTitle(rs.getString(2));
+				tbeans.setThreadUser(rs.getString(3));
+				tbeans.setThreadDate(rs.getString(4));
+				tbeans.setThreadRes(rs.getString(5));
+				//System.out.println("OK");
+				
+				threadList.add(tbeans);
+			}
+			System.out.println("searchNoに追加したよ。");
+			conn.commit();
+			st.close();
+			conn.close();
+		}catch(SQLException e){
+			System.out.println("searchNoできませんでした。");
+		}
+		System.out.println("ここまでくれば多分searchNoができる。");
+		
+		return threadList;
+	}
+		public ArrayList<ThreadBeans> searchUserName(String data){
+		ArrayList<ThreadBeans> threadList = new ArrayList<ThreadBeans>();
+		
+		try{
+			String sql="select thread_no,thread_title,thread_username,thread_date,thread_res from thread where thread_username = '"+data+"' order by thread_no";		//select文oracleに入力
+			getConnection();
+			System.out.println("searchUserName接続した");
+			Statement st=conn.createStatement();
+
+			ResultSet rs=st.executeQuery(sql);
+			//st = conn.prepareStatement(sql);			//prepareの状態
+			System.out.println("prepareStatementが終了");
+			//re=st.executeQuery();					//実行select
+			System.out.println("executeQueryが終了");
+			
+			while(rs.next()){
+				ThreadBeans tbeans = new ThreadBeans();
+				
+				tbeans.setThreadNo(rs.getString(1));
+				tbeans.setThreadTitle(rs.getString(2));
+				tbeans.setThreadUser(rs.getString(3));
+				tbeans.setThreadDate(rs.getString(4));
+				tbeans.setThreadRes(rs.getString(5));
+				//System.out.println("OK");
+				
+				threadList.add(tbeans);
+			}
+			System.out.println("searchUserNameに追加したよ。");
+			conn.commit();
+			st.close();
+			conn.close();
+		}catch(SQLException e){
+			System.out.println("searchUserNameできませんでした。");
+		}
+		System.out.println("ここまでくれば多分searchUserNameができる。");
+		
+		return threadList;
+	}
+		public ArrayList<ThreadBeans> searchTitle(String data){
+		ArrayList<ThreadBeans> threadList = new ArrayList<ThreadBeans>();
+		
+		try{
+			String sql="select thread_no,thread_title,thread_username,thread_date,thread_res from thread where thread_title = '"+data+"' order by thread_no";		//select文oracleに入力
+			getConnection();
+			System.out.println("searchNo接続した");
+			Statement st=conn.createStatement();
+
+			ResultSet rs=st.executeQuery(sql);
+			//st = conn.prepareStatement(sql);			//prepareの状態
+			System.out.println("prepareStatementが終了");
+			//re=st.executeQuery();					//実行select
+			System.out.println("executeQueryが終了");
+			
+			while(rs.next()){
+				ThreadBeans tbeans = new ThreadBeans();
+				
+				tbeans.setThreadNo(rs.getString(1));
+				tbeans.setThreadTitle(rs.getString(2));
+				tbeans.setThreadUser(rs.getString(3));
+				tbeans.setThreadDate(rs.getString(4));
+				tbeans.setThreadRes(rs.getString(5));
+				//System.out.println("OK");
+				
+				threadList.add(tbeans);
+			}
+			System.out.println("searchTitleに追加したよ。");
+			conn.commit();
+			st.close();
+			conn.close();
+		}catch(SQLException e){
+			System.out.println("searchTitleできませんでした。");
+		}
+		System.out.println("ここまでくれば多分searchTitleができる。");
+		
+		return threadList;
+	}
 //======================================================アカウントを作成======================================================		
 	public ArrayList<UserBeans> newUser(String name, String pass){
 		
@@ -119,7 +234,6 @@ public class DBAccessor{
 //=======================================================Threadの閲覧=======================================================	
 	public ArrayList<ThreadBeans> readThreads(){
 		ArrayList<ThreadBeans> threadList = new ArrayList<ThreadBeans>();
-		
 		
 		try{
 			String sql="select thread_no,thread_title,thread_username,thread_date,thread_res from thread order by thread_no";		//select文oracleに入力

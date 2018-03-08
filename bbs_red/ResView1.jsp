@@ -12,10 +12,10 @@
 <div>
 		<form method='post' action='ResServlet'>
 			<table style="color:white;">
-				<tr><td><font face="DFKai-sb" size="4" style="color:white;">名前</font></td><td><input type="text" name="User" id="res_name"></td></tr>
+				<tr><td><font face="DFKai-sb" size="4" style="color:white;">名前</font></td><td><input type="text" name="User" id="res_name" maxlength="10"></td></tr>
 				<tr><td colspan="2"><font face="DFKai-sb" size="5" style="color:white;" >返信内容</font></td></tr>
 				<tr><td colspan="2">
-					<textarea id="textbox" type='text' name='Content'></textarea>
+					<textarea id="textbox" type='text' name='Content' maxlength="500"></textarea>
 					<input type="hidden" name="no" value="${threadNo}">
 					<input type="hidden" name="username" value="${threadUsername}">
 					<input type="hidden" name="title" value="${threadTitle}">

@@ -28,9 +28,9 @@
 	
 	<form method="post" action="SearchServlet" id="formcontent" align="left">
 	<select name="Search" style="width:200px;height:25px;font-size:15px;">
-			<option value="No">番号から探す</option>
-			<option value="UserName">作成者から探す</option>
-			<option value="Title">タイトルから探す</option>
+			<option name="No" value="No">番号から探す</option>
+			<option name="UserName" value="UserName">作成者から探す</option>
+			<option name="Title" value="Title">タイトルから探す</option>
 	</select>
 	<input type = "text" name="searchData" style="width:200px;height:25px;font-size:15px;"> 
 	<input type="submit" value="検索" id="search" style="width:200px;height:25px;font-size:15px;">
@@ -39,13 +39,14 @@
 	
 	<input type="button" id="createthread" style="width:120px;height:30px;font-size:10px;" value="スレッド作成" onclick="self.location.href='writeThread.jsp'" align=right>
 	<input type="button" id="index" style="width:120px;height:30px;font-size:10px;" value="TOPページに戻る" onclick="self.location.href='Index.jsp'" align=right>
+	<input type="button" id="threadview" style="width:120px;height:30px;font-size:10px;" value="前のページに戻る" onclick="history.back()" align=right>
 	<input type="button" id="logout" style="width:120px;height:30px;font-size:10px;" value="Logout" onclick="Logout()" align=right>
 	<br><br><br>
 	
 	
-	<table border="1" style="color:white;" align=center width=98% height=98% cellspacing=1 cellpadding=6>
+	<table border="1" style="color:white;" align=center width=98% cellspacing=1 cellpadding=6>
 
-	<tr>
+	<tr height=10%>
 	<th width="15%">番号</th>
 	<th width="30%">タイトル</th>
 	<th width="15%">作成者</th>

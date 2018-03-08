@@ -33,11 +33,13 @@
 	
 	<input type="button" id="login" style="width:120px;height:30px;font-size:10px;" value="GO Login" onclick="self.location.href='Login.jsp'" align=right>
 	<input type="button" id="index" style="width:120px;height:30px;font-size:10px;" value="TOPページに戻る" onclick="self.location.href='Index.jsp'" align=right>
+	<input type="button" id="threadview" style="width:120px;height:30px;font-size:10px;" value="前のページに戻る" onclick="history.back()" align=right>
+
 	<br><br><br>
 	
-	<table border="1" style="color:white;" align=center width=98% height=98% cellspacing=1 cellpadding=6>
+	<table border="1" style="color:white;" align=center width=98%  cellspacing=1 cellpadding=6>
 
-	<tr>
+	<tr height=10%>
 	<th width="15%">番号</th>
 	<th width="30%">タイトル</th>
 	<th width="15%">作成者</th>

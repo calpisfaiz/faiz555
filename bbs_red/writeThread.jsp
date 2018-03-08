@@ -47,7 +47,7 @@
             out.println(session.getAttribute("username"));
 		%></font></h2>
 		<h2>スレッドタイトル</h2>
-		<input type="text" name="thread_title">
+		<input type="text" name="thread_title" maxlength="20">
 		<br><br>
 	
 		<br><br><br>

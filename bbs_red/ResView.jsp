@@ -20,7 +20,7 @@
             	out.println(session.getAttribute("username"));%></b></font></td></tr>
 				<tr><td colspan="2"><font face="DFKai-sb" size="5" style="color:white;" >ï‘êMì‡óe</font></td></tr>
 				<tr><td colspan="2">
-					<textarea id="textbox" type='text' name='Content'></textarea>
+					<textarea id="textbox" type='text' name='Content' maxlength="500"></textarea>
 					<input type="hidden" name="no" value="${threadNo}">
 					<input type="hidden" name="username" value="${threadUsername}">
 					<input type="hidden" name="title" value="${threadTitle}">

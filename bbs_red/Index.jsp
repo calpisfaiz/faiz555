@@ -30,6 +30,10 @@
 				window.alert("ユーザー名を入力してください");
 				return false;
  			}
+ 			if (reg.newname.value.length < 6) {
+				window.alert("ユーザー名を6文字以上にししてください");
+				return false;
+ 			}
  			if (reg.newpassword.value == "") {
 				window.alert("パスワードを入力してください");
 				return false;
@@ -80,12 +84,15 @@
 	<br><br><font face="DFKai-sb" size="6">新規登録</font><br><br><br>
 
 	<form id="reg" name="reg" method='get' action='CreateAccountServlet' onsubmit="return check();"><br>
-		ユーザー名を入力してください<br><br>
-		<input type="text" name="newname">		<br><br>
-		パスワードを入力してください<br><br>
-		<input type="password" name="newpassword">		<br><br>
-		パスワードを再入力してください<br><br>
-		<input type="password" name="password">		<br><br><br><br><br>
+		ユーザー名を入力してください<br>
+		<font color="yellow" size="2"><b>英数字のみ</b></font><br>
+		<input type="text" name="newname" maxlength="15" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">		<br><br>
+		パスワードを入力してください<br>
+		<font color="yellow" size="2"><b>英数字のみ</b></font><br>
+		<input type="password" name="newpassword" maxlength="15" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">		<br><br>
+		パスワードを再入力してください<br>
+		<font color="yellow" size="2"><b>英数字のみ</b></font><br>
+		<input type="password" name="password" maxlength="10" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">		<br><br><br><br><br>
 		<input type="submit" value="新規登録！" style="width:120px;height:40px;font-size:15px;">
 		
 
